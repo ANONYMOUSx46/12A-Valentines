@@ -63,9 +63,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose }) => {
   return (
     <form
       name="order-form"
-      method="POST"
-      action="/success"
-      data-netlify="true"
+      netlify
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       className="space-y-4"
