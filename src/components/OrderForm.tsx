@@ -4,10 +4,9 @@ import { products } from '../data/products';
 
 interface OrderFormProps {
   onClose: () => void;
-  onSubmit: () => void;
 }
 
-const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
+const OrderForm: React.FC<OrderFormProps> = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     surname: '',
@@ -54,7 +53,11 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
 
     // Close the form and handle submission
     onClose();
-    onSubmit();
+
+    // Redirect to the main site
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 1000); // Delay to show a success message or animation
   };
 
   return (
