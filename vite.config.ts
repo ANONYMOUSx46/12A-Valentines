@@ -8,6 +8,7 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   build: {
+    outDir: 'build', // Ensure this line is present
     rollupOptions: {
       external: ['react-router-dom']
     }
