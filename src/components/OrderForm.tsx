@@ -4,9 +4,10 @@ import { products } from '../data/products';
 
 interface OrderFormProps {
   onClose: () => void;
+  onSubmit: () => void; // Add this line
 }
 
-const OrderForm: React.FC<OrderFormProps> = ({ onClose }) => {
+const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
   const [formData, setFormData] = useState({
     name: '',
     surname: '',
@@ -51,7 +52,10 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose }) => {
       comment: ''
     });
 
-    // Close the form and handle submission
+    // Invoke the onSubmit prop
+    onSubmit();
+
+    // Close the form
     onClose();
 
     // Redirect to the main site
@@ -63,6 +67,8 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose }) => {
   return (
     <form
       name="order-form"
+      method="POST"
+      action="/success"
       netlify
       data-netlify="true"
       data-netlify-honeypot="bot-field"
