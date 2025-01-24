@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, ShoppingCart, Send, Gift } from 'lucide-react';
+import { Heart, ShoppingCart, Gift } from 'lucide-react';
 import ProductCard from './components/ProductCard';
 import OrderForm from './components/OrderForm';
 import Success from './pages/Success';
