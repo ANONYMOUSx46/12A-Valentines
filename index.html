@@ -8,6 +8,14 @@
   </head>
   <body>
     <div id="root"></div>
+    <form name="order-form" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="text" name="surname" />
+  <input type="text" name="grade" />
+  <input type="email" name="email" />
+  <input type="text" name="product" />
+  <textarea name="comment"></textarea>
+</form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
