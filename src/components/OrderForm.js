@@ -1,13 +1,8 @@
-import React, { useState, ReactElement } from 'react';
+import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import { products } from '../data/products';
 
-interface OrderFormProps {
-  onClose: () => void;
-  onSubmit: () => void; // Add this line
-}
-
-const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElement => {
+const OrderForm = ({ onClose, onSubmit }) => {
   const [formData, setFormData] = useState({
     name: '',
     surname: '',
@@ -19,7 +14,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElemen
   const [submissionCount, setSubmissionCount] = useState(0);
   const [isFormDisabled, setIsFormDisabled] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -27,7 +22,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElemen
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (submissionCount >= 100) {
@@ -52,13 +47,13 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElemen
     });
 
     // Submit the form data to Netlify
-    const formElement = e.target as HTMLFormElement;
+    const formElement = e.target;
     try {
       const formDataObj = new FormData(formElement);
       const params = new URLSearchParams(formDataObj);
       console.log('Form Data:', [...params.entries()]); // Log form data
 
-      const response = await fetch('', {
+      const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: params,
@@ -72,7 +67,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElemen
       onSubmit();
       onClose();
       setTimeout(() => {
-        window.location.href = '';
+        window.location.href = '/';
       }, 1000); // Delay to show a success message or animation
     } catch (error) {
       console.error('Error submitting form:', error);
