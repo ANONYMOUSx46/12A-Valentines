@@ -8,19 +8,4 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  build: {
-    outDir: 'build', // Ensure this matches your Netlify publish directory
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    }
-  },
-  server: {
-    port: 3000, // Optional: specify the development server port
-    open: true, // Optional: automatically open the browser on start
-  },
-  build: {
-    sourcemap: true, // Enable source maps for easier debugging
-  },
-});
+ 
