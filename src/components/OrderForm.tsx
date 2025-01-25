@@ -58,7 +58,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElemen
       const params = new URLSearchParams(formDataObj);
       console.log('Form Data:', [...params.entries()]); // Log form data
 
-      const response = await fetch('/', {
+      const response = await fetch('', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: params,
@@ -72,7 +72,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElemen
       onSubmit();
       onClose();
       setTimeout(() => {
-        window.location.href = '/';
+        window.location.href = '';
       }, 1000); // Delay to show a success message or animation
     } catch (error) {
       console.error('Error submitting form:', error);
