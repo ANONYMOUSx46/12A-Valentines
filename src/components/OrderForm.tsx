@@ -83,7 +83,6 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElemen
     <form
       name="order-form"
       method="POST"
-      action="/success"
       netlify
       data-netlify="true"
       data-netlify-honeypot="bot-field"
