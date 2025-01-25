@@ -53,22 +53,30 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElemen
 
     // Submit the form data to Netlify
     const formElement = e.target as HTMLFormElement;
-    await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(formElement)),
-    })
-    .then(() => {
+    try {
+      const formDataObj = new FormData(formElement);
+      const params = new URLSearchParams(formDataObj);
+      console.log('Form Data:', [...params.entries()]); // Log form data
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error submitting form: ${response.statusText}`);
+      }
+
       // Handle success
       onSubmit();
       onClose();
       setTimeout(() => {
         window.location.href = '/';
       }, 1000); // Delay to show a success message or animation
-    })
-    .catch(error => {
+    } catch (error) {
       console.error('Error submitting form:', error);
-    });
+    }
   };
 
   return (
