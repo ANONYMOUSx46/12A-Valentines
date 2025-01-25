@@ -10,7 +10,6 @@ export default defineConfig({
   build: {
     outDir: 'build', // Ensure this line is present
     rollupOptions: {
-      external: ['react-router-dom']
     }
   }
 });
