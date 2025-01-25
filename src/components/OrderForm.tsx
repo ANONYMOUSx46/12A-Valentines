@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ReactElement } from 'react';
 import { Send } from 'lucide-react';
 import { products } from '../data/products';
 
@@ -7,7 +7,7 @@ interface OrderFormProps {
   onSubmit: () => void; // Add this line
 }
 
-const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
+const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }): ReactElement => {
   const [formData, setFormData] = useState({
     name: '',
     surname: '',
@@ -16,7 +16,6 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
     product: '',
     comment: ''
   });
-
   const [submissionCount, setSubmissionCount] = useState(0);
   const [isFormDisabled, setIsFormDisabled] = useState(false);
 
@@ -28,8 +27,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (submissionCount >= 100) {
       alert('The daily submission limit has been reached. Please try again tomorrow.');
       return;
@@ -37,7 +37,6 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
 
     // Track the submission
     setSubmissionCount(prevCount => prevCount + 1);
-
     if (submissionCount + 1 === 100) {
       setIsFormDisabled(true);
     }
@@ -52,16 +51,24 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
       comment: ''
     });
 
-    // Invoke the onSubmit prop
-    onSubmit();
-
-    // Close the form
-    onClose();
-
-    // Redirect to the main site
-    setTimeout(() => {
-      window.location.href = '/';
-    }, 1000); // Delay to show a success message or animation
+    // Submit the form data to Netlify
+    const formElement = e.target as HTMLFormElement;
+    await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(formElement)),
+    })
+    .then(() => {
+      // Handle success
+      onSubmit();
+      onClose();
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 1000); // Delay to show a success message or animation
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+    });
   };
 
   return (
@@ -82,9 +89,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
         <input name="bot-field" onChange={() => {}} />
       </div>
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+        <label htmlFor="name-input" className="block text-sm font-medium text-gray-700">Name</label>
         <input
-          id="name"
+          id="name-input"
           type="text"
           name="name"
           value={formData.name}
@@ -95,9 +102,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
         />
       </div>
       <div>
-        <label htmlFor="surname" className="block text-sm font-medium text-gray-700">Surname</label>
+        <label htmlFor="surname-input" className="block text-sm font-medium text-gray-700">Surname</label>
         <input
-          id="surname"
+          id="surname-input"
           type="text"
           name="surname"
           value={formData.surname}
@@ -108,9 +115,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
         />
       </div>
       <div>
-        <label htmlFor="grade" className="block text-sm font-medium text-gray-700">Grade</label>
+        <label htmlFor="grade-input" className="block text-sm font-medium text-gray-700">Grade</label>
         <input
-          id="grade"
+          id="grade-input"
           type="text"
           name="grade"
           value={formData.grade}
@@ -121,9 +128,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
         />
       </div>
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+        <label htmlFor="email-input" className="block text-sm font-medium text-gray-700">Email</label>
         <input
-          id="email"
+          id="email-input"
           type="email"
           name="email"
           value={formData.email}
@@ -134,9 +141,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
         />
       </div>
       <div>
-        <label htmlFor="product" className="block text-sm font-medium text-gray-700">Select Product</label>
+        <label htmlFor="product-input" className="block text-sm font-medium text-gray-700">Select Product</label>
         <select
-          id="product"
+          id="product-input"
           name="product"
           value={formData.product}
           required
@@ -153,9 +160,9 @@ const OrderForm: React.FC<OrderFormProps> = ({ onClose, onSubmit }) => {
         </select>
       </div>
       <div>
-        <label htmlFor="comment" className="block text-sm font-medium text-gray-700">Comments/Special Requests</label>
+        <label htmlFor="comment-input" className="block text-sm font-medium text-gray-700">Comments/Special Requests</label>
         <textarea
-          id="comment"
+          id="comment-input"
           name="comment"
           value={formData.comment}
           rows={3}
