@@ -18,7 +18,7 @@ export const products = [
     name: "Ribbon Rose Bouquet",
     price: 45.00,
     description: "Beautiful handcrafted ribbon rose bouquet",
-    image: "need a pic"
+    image: "/ribbon-rose.jpg"
   },
   {
     id: 4,
@@ -39,11 +39,11 @@ export const products = [
     name: "Ice Coffee",
     price: 18.00,
     description: "Refreshing iced coffee perfect for a summer day",
-    image: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&q=80"
+    image: "https://cdn.pixabay.com/photo/2024/06/26/06/58/ai-generated-8854172_960_720.jpg"
   },
   {
     id: 7,
-    name: "Ice Lollies",
+    name: "Suckers",
     price: 12.00,
     description: "Cool and refreshing ice lollies in various flavours",
     image: "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?auto=format&fit=crop&q=80"
