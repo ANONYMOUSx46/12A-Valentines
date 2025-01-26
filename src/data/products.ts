@@ -18,7 +18,7 @@ export const products = [
     name: "Ribbon Rose Bouquet",
     price: 45.00,
     description: "Beautiful handcrafted ribbon rose bouquet",
-    image: ribbonRoseImage
+    image: "ribbon-rose.jpg"
   },
   {
     id: 4,
