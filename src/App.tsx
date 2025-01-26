@@ -41,7 +41,7 @@ function App() {
             <div className="container mx-auto px-4 py-16 relative">
               <div className="text-center animate-fade-in">
                 <Heart className="w-16 h-16 text-red-500 mx-auto mb-6 animate-pulse" />
-                <h1 className="text-5xl font-bold text-red-600 mb-4">Grade 12A Valentine's Day</h1>
+                <h1 className="text-5xl font-bold text-red-600 mb-4">Grade 12A Valentine's Day Programme 2025</h1>
                 <h2 className="text-2xl text-gray-700 mb-8">Grassdale High School</h2>
                 <button
                   onClick={() => setIsFormOpen(true)}
@@ -90,7 +90,7 @@ function App() {
             <div className="container mx-auto px-4 text-center">
               <p className="mb-2">Grassdale High School - Grade 12A</p>
               <p className="text-sm opacity-75">Spreading love and joy this Valentine's Day</p>
-              <p className="text-sm opacity-75">Developed By Liam De Wet © All Rights Reserved</p>
+              <p className="text-sm opacity-75">Developed By Liam De Wet © All Rights Reserved 2025</p>
             </div>
           </footer>
         </>
