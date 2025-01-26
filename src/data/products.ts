@@ -1,3 +1,5 @@
+
+import ribbonRoseImage from "../assets/images/ribbon-rose.jpg";
 export const products = [
   {
     id: 1,
@@ -18,7 +20,7 @@ export const products = [
     name: "Ribbon Rose Bouquet",
     price: 45.00,
     description: "Beautiful handcrafted ribbon rose bouquet",
-    image: "ribbon-rose.jpg"
+    image: ribbonRoseImage
   },
   {
     id: 4,
