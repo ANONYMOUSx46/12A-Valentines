@@ -75,7 +75,7 @@ export const products = [
     id: 11,
     name: "Buscuits",
     price: 15.00,
-    description: "A delicious butter buscuits go with your iced coffee",
+    description: "A delicious butter buscuit to go with your iced coffee",
     image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/7860f881-7678-4ced-b617-5757e0972611/c4ecad6d-192c-4dfc-92d8-8dfe136ae2bb.png"
   },
   {	
@@ -89,7 +89,7 @@ export const products = [
     id: 13,
     name: "Suckers",
     price: 5.00,
-    description: "Cool and refreshing suckerss in various flavours",
+    description: "Cool and refreshing suckers in various flavours",
     image: "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?auto=format&fit=crop&q=80"
   },
   {
