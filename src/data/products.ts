@@ -54,7 +54,7 @@ export const products = [
     id: 8,
     name: " Film TikToks",
     price: 10.00,
-    description: "Recreate fun and famous TicTok dances with your friends at the photobooth area",
+    description: "Recreate fun and famous TikTok dances with your friends at the photobooth area",
     image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/0976ef25-8b65-4e91-9954-f7c01d9d540a/a35d5bda-8398-466d-a8a2-40c32e054daa.png"
   },
   {
