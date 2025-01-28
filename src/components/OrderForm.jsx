@@ -8,10 +8,9 @@ const OrderForm = ({ onClose, onSubmit }) => {
     surname: '',
     grade: '',
     email: '',
-    products: [] as string[],
+    products: [], // Change to an array to hold multiple products
     comment: ''
   });
-
   const [submissionCount, setSubmissionCount] = useState(0);
   const [isFormDisabled, setIsFormDisabled] = useState(false);
 
@@ -42,7 +41,6 @@ const OrderForm = ({ onClose, onSubmit }) => {
 
     // Track the submission
     setSubmissionCount(prevCount => prevCount + 1);
-
     if (submissionCount + 1 === 100) {
       setIsFormDisabled(true);
     }
@@ -61,18 +59,19 @@ const OrderForm = ({ onClose, onSubmit }) => {
     const formElement = e.target;
     try {
       const formDataObj = new FormData(formElement);
-      // Convert the products array to a comma-separated string
-      formDataObj.set('products', formData.products.join(', '));
       const params = new URLSearchParams(formDataObj);
       console.log('Form Data:', [...params.entries()]); // Log form data
+
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: params,
       });
+
       if (!response.ok) {
         throw new Error(`Error submitting form: ${response.statusText}`);
       }
+
       // Handle success
       onSubmit();
       onClose();
@@ -154,7 +153,7 @@ const OrderForm = ({ onClose, onSubmit }) => {
       </div>
       <div>
         <label className="block text-sm font-medium text-gray-700">Select Products</label>
-        <div className="mt-1 space-y-2">
+        <div className="mt-2 space-y-1">
           {products.map(product => (
             <div key={product.id} className="flex items-center">
               <input
@@ -163,11 +162,11 @@ const OrderForm = ({ onClose, onSubmit }) => {
                 name="products"
                 value={product.name}
                 checked={formData.products.includes(product.name)}
-                className="mr-2"
+                className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
                 onChange={handleChange}
                 disabled={isFormDisabled}
               />
-              <label htmlFor={`product-${product.id}`} className="text-gray-700">
+              <label htmlFor={`product-${product.id}`} className="ml-2 block text-sm text-gray-900">
                 {product.name} - R{product.price.toFixed(2)}
               </label>
             </div>
