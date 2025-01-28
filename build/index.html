@@ -1,23 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12A Valentines Day Programme</title>
-    <script type="module" crossorigin src="/assets/index-CMrbu7BL.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BVjomoEu.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <form name="order-form" netlify netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name" />
-  <input type="text" name="surname" />
-  <input type="text" name="grade" />
-  <input type="email" name="email" />
-  <input type="text" name="product" />
-  <textarea name="comment"></textarea>
-</form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Project Title</title>
+</head>
+<body>
+  <form name="order-form" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="text" name="surname" />
+    <input type="text" name="grade" />
+    <input type="email" name="email" />
+    <!-- Remove the single product input -->
+    <!-- <input type="text" name="product" /> -->
+    <!-- Add multiple products[] inputs -->
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <input type="text" name="products[]" />
+    <textarea name="comment"></textarea>
+  </form>
 
-  </body>
+  <!-- Your main application content -->
+  <div id="root"></div>
+
+  <!-- Include your JavaScript bundle -->
+  <script src="/path/to/your/bundle.js"></script>
+</body>
 </html>
