@@ -55,8 +55,8 @@ const OrderForm = ({ onClose, onSubmit }) => {
     formDataObj.append('comment', formData.comment);
 
     // Append each selected product
-    formData.products.forEach(product => {
-      formDataObj.append('products[]', product);
+    formData.products.forEach((product, index) => {
+      formDataObj.append(`products[${index}]`, product);
     });
 
     const params = new URLSearchParams(formDataObj);
