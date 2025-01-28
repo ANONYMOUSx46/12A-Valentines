@@ -45,23 +45,25 @@ const OrderForm = ({ onClose, onSubmit }) => {
       setIsFormDisabled(true);
     }
 
-    // Reset the form
-    setFormData({
-      name: '',
-      surname: '',
-      grade: '',
-      email: '',
-      products: [],
-      comment: ''
+    // Prepare form data for submission
+    const formDataObj = new FormData();
+    formDataObj.append('form-name', 'order-form');
+    formDataObj.append('name', formData.name);
+    formDataObj.append('surname', formData.surname);
+    formDataObj.append('grade', formData.grade);
+    formDataObj.append('email', formData.email);
+    formDataObj.append('comment', formData.comment);
+
+    // Append each selected product
+    formData.products.forEach((product, index) => {
+      formDataObj.append(`products[${index}]`, product);
     });
 
-    // Submit the form data to Netlify
-    const formElement = e.target;
-    try {
-      const formDataObj = new FormData(formElement);
-      const params = new URLSearchParams(formDataObj);
-      console.log('Form Data:', [...params.entries()]); // Log form data
+    const params = new URLSearchParams(formDataObj);
+    console.log('Form Data:', [...params.entries()]); // Log form data
 
+    // Submit the form data to Netlify
+    try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
