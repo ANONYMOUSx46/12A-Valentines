@@ -10,8 +10,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'build', // Ensure this matches your Netlify publish directory
-    sourcemap: true, // Enable source maps for easier debugging
-    assetsDir: 'assets', // Ensure assets are placed in the assets directory
+    sourcemap: true // Enable source maps for easier debugging
   },
   resolve: {
     alias: {
