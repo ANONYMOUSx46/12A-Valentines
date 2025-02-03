@@ -12,7 +12,7 @@ export const products = [
     id: 2,
     name: " Smash Burger",
     price: 35.00,
-    description: "Delicious smash burger filled withexotic flavours",
+    description: "Delicious smash burger filled with exotic flavours",
     image: "https://files.oaiusercontent.com/file-2FA4ZToHMnXubfU1TTDooH?se=2025-02-03T22%3A31%3A50Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Da09605f4-9a71-4de7-9dc7-e2690ad11cc6.webp&sig=t/hzLVBpqOafwRUlJAJ2tUFZv4m1ClDAscVBjnVr%2BvA%3D"
 	},
   {
