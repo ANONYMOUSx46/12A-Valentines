@@ -1,15 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12A Valentines Day Programme</title>
-  <!-- Vite will inject the correct script and link tags here -->
-</head>
-<body>
-  <div id="root"></div>
-  <form name="order-form" netlify netlify-honeypot="bot-field" hidden>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12A Valentines Day Programme</title>
+  </head>
+  <body>
+    <div id="root"></div>
+      <form name="order-form" netlify netlify-honeypot="bot-field" hidden>
     <input type="text" name="name" />
     <input type="text" name="surname" />
     <input type="text" name="grade" />
@@ -18,5 +17,6 @@
     <input type="text" name="products[]" />
     <textarea name="comment"></textarea>
   </form>
-</body>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
