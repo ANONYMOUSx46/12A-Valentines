@@ -10,17 +10,10 @@ export const products = [
   },
   {
     id: 2,
-    name: "Burger and chips combo",
+    name: " Smash Burger",
     price: 35.00,
-    description: "Delicious burger served with chips",
-    image: "https://r2.flux1.ai/result-AOvlDPeDYV.png"
-	},
-   {
-    id: 3,
-    name: "Wrap and chips combo",
-    price: 30.00,
-    description: "A tasty wrap served with chips",
-    image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/672aa92f-efea-4238-811a-b2e3206046e3/6ca1b2cb-2159-4b4e-bb3e-f11e252a8fbd.png"
+    description: "Delicious smash burger filled withexotic flavours",
+    image: "https://files.oaiusercontent.com/file-2FA4ZToHMnXubfU1TTDooH?se=2025-02-03T22%3A31%3A50Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Da09605f4-9a71-4de7-9dc7-e2690ad11cc6.webp&sig=t/hzLVBpqOafwRUlJAJ2tUFZv4m1ClDAscVBjnVr%2BvA%3D"
 	},
   {
     id: 4,
