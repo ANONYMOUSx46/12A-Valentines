@@ -8,7 +8,7 @@ const OrderForm = ({ onClose, onSubmit }) => {
     surname: '',
     grade: '',
     email: '',
-    products: [], // Change to an array to hold multiple products
+    products: [], // Array to hold multiple products
     comment: ''
   });
   const [submissionCount, setSubmissionCount] = useState(0);
@@ -16,7 +16,6 @@ const OrderForm = ({ onClose, onSubmit }) => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-
     if (type === 'checkbox') {
       setFormData(prev => ({
         ...prev,
@@ -54,20 +53,18 @@ const OrderForm = ({ onClose, onSubmit }) => {
     formDataObj.append('email', formData.email);
     formDataObj.append('comment', formData.comment);
 
-    // Append each selected product
-    formData.products.forEach((product, index) => {
-      formDataObj.append(`products[${index}]`, product);
-    });
+    // Combine selected products into a comma-separated string
+    const selectedProducts = formData.products.join(',');
 
-    const params = new URLSearchParams(formDataObj);
-    console.log('Form Data:', [...params.entries()]); // Log form data
+    // Append the combined products string
+    formDataObj.append('products', selectedProducts);
 
     // Submit the form data to Netlify
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: params,
+        body: new URLSearchParams(formDataObj).toString(),
       });
 
       if (!response.ok) {
