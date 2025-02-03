@@ -90,7 +90,7 @@ function App() {
             <div className="container mx-auto px-4 text-center">
               <p className="mb-2">Grassdale High School - Grade 12A</p>
               <p className="text-sm opacity-75">Spreading love and joy this Valentine's Day</p>
-              <p className="text-sm opacity-75">Developed By Liam De Wet © All Rights Reserved 2025</p>
+              <p className="text-sm opacity-75"> © 2025 Developed By Liam De Wet. All Rights Reserved. </p>
             </div>
           </footer>
         </>
