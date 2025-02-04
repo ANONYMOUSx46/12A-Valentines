@@ -86,13 +86,6 @@ export const products = [
     image: "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?auto=format&fit=crop&q=80"
   },
   {
-    id: 14,
-    name: "Scores/Switch Energy Drinks",
-    price: 10.00,
-    description: "Energizing energy drinks on the go",
-    image: "https://drinkswitch.co.za/wp-content/uploads/2023/08/Switch_Ellispark23_152.jpg"
-  },
-  {
     id: 15,
     name: "Anonymous Love Letters",
     price: 5.00,
