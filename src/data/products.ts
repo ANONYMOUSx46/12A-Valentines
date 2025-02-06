@@ -32,14 +32,14 @@ export const products = [
     id: 3,
     name: "Ribbon Rose Bouquet",
     price: 20.00,
-    description: "Beautiful handcrafted ribbon rose bouquet 8 flowers in a bouqet, R5 for a single flower",
+    description: "Beautiful handcrafted ribbon rose bouquet 8 flowers in a bouquet, R5 for a single flower",
     image: ribbonRoseImage
   },
     {	
     id: 4,
     name: "Milkshake 500ml",
     price: 15.00,
-    description: "Sweet and tasty Milkshake in a 500ml cup,coming in various flavours",
+    description: "Sweet and tasty Milkshake in a 500ml cup, in various flavours",
     image: popCornImage
     },
   {	
