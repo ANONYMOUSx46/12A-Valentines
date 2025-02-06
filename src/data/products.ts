@@ -59,13 +59,6 @@ export const products = [
   },
   {
     id: 8,
-    name: "Anonymous Love Letters",
-    price: 5.00,
-    description: "Surprise your secret crush with an anonymous letter crafted by you",
-    image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/fb81d129-2837-4314-ba5f-99f1b4e8e38d/d3c049b7-efe6-4fea-ac4c-6003ed10464c.png"
-  },
-  {
-    id: 9,
     name: " Girl-Themed Raffle Bundle",
     price: 10.00,
     description: "Win amazing prizes specifically girl-themed R10 per ticket",
