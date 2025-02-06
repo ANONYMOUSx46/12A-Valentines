@@ -1,5 +1,11 @@
 
 import ribbonRoseImage from "../assets/images/ribbon-rose.jpg";
+import boyThemeImage from "../assets/images/boy-theme.png";
+import girlThemeImage from "../assets/images/girl-theme.png";
+import milkshakeImage from "../assets/images/milkshake.png";
+import popCornImage from "../assets/images/popcorn.png";
+import smashburgerImage from "../assets/images/smash-burger.png";
+import oatcrunchieImage from "../assets/images/oat-crunchies.png";
 export const products = [
   {
     id: 1,
@@ -13,14 +19,14 @@ export const products = [
     name: "Oat Crunchies",
     price: 5.00,
     description: "Tasty Oat crunchies to nibble on, 3 in a pack",
-    image: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&q=80"
+    image:  oatcrunchieImage
   },
   {
     id: 2,
     name: " Smash Burger Special with chips",
     price: 40.00,
     description: "Delicious smash burger filled with exotic flavours featuring hot chips. Can purchase a single burger for R30 and the hot chips for R15",
-    image: "https://files.oaiusercontent.com/file-2FA4ZToHMnXubfU1TTDooH?se=2025-02-03T22%3A31%3A50Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Da09605f4-9a71-4de7-9dc7-e2690ad11cc6.webp&sig=t/hzLVBpqOafwRUlJAJ2tUFZv4m1ClDAscVBjnVr%2BvA%3D"
+    image: girlThemeImage 
 	},
   {
     id: 3,
@@ -34,8 +40,8 @@ export const products = [
     name: "Milkshake 500ml",
     price: 15.00,
     description: "Sweet and tasty Milkshake in a 500ml cup,coming in various flavours",
-    image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/fafb63a5-d3d8-4956-a983-d32c511da7be/df125733-2395-4e3b-acff-8c8381f1b2fd.png"
-  },
+    image: popCornImage
+    },
   {	
     id: 5,
     name: "Buscuits",
@@ -55,21 +61,21 @@ export const products = [
     name: "Fresh Popcorn",
     price: 5.00,
     description: "Freshly popped popcorn",
-    image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/60f57b22-d027-4e79-a13c-839b716ec067/daa2a3b8-3518-47d3-aedc-91ba4c77f62c.png"
+    image: milkshakeImage
   },
   {
     id: 8,
     name: " Girl-Themed Raffle Bundle",
     price: 10.00,
     description: "Win amazing prizes specifically girl-themed R10 per ticket",
-    image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&q=80"
+    image:  smashburgerImage
   },
 	  {
     id: 10,
     name: " Boy-Themed Raffle Bundle",
     price: 10.00,
     description: "Win exciting prizes specifically boy-themed R10 per ticket",
-    image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&q=80"
+    image: boyThemeImage
   },
    {
     id: 11,
