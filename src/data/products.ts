@@ -6,6 +6,9 @@ import milkshakeImage from "../assets/images/milkshake.png";
 import popCornImage from "../assets/images/popcorn.png";
 import smashburgerImage from "../assets/images/smash-burger.png";
 import oatcrunchieImage from "../assets/images/oat-crunchies.png";
+import Chiproll from "../assets/images/chiproll.jpg";
+import Vienna from "../assets/images/vienna.jpg";
+import IceCoffee from "../assets/images/af853bc1-d98d-4a79-ae53-b671afe5451f.png";
 export const products = [
   {
     id: 1,
@@ -26,14 +29,14 @@ export const products = [
     name: "Vienna Parcels",
     price: 40.00,
     description: "Delicious Vienna parcels filled with exotic flavours",
-    image: girlThemeImage 
+    image: Vienna 
 	},
   {
     id: 4,
     name: "Chip Rolls",
     price: 40.00,
     description: "Rolls filled with hot chips perfect for a quick meal",
-    image: girlThemeImage 
+    image: Chiproll 
 	},
   {
     id: 5,
@@ -47,7 +50,7 @@ export const products = [
     name: "Ice Coffee 500ml",
     price: 15.00,
     description: "Refreshing Iced Coffee to sip on throughout your day",
-    image: popCornImage
+    image: IceCoffee
     },
   {	
     id: 7,
