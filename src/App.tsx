@@ -43,7 +43,7 @@ function App() {
                 <Heart className="w-16 h-16 text-red-500 mx-auto mb-6 animate-pulse" />
                 <h1 className="text-5xl font-bold text-red-600 mb-4">Grade 12A Valentine's Day Programme 2025</h1>
                 <h2 className="text-2xl text-gray-700 mb-8">Grassdale High School Valentines Day Grade 12 Fundraiser.</h2>
-                 <h3 className="text-2xl text-gray-700 mb-8">Disclaimer, the images used are just there as a visual representation.</h2>
+                 <h3 className="text-2xl text-gray-700 mb-8">Disclaimer, the images used are just there as a visual representation.</h3>
                 <button
                   onClick={() => setIsFormOpen(true)}
                   className="bg-red-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg"
