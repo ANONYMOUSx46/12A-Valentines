@@ -34,7 +34,7 @@ export const products = [
   {
     id: 4,
     name: "Chip Rolls",
-    price: 40.00,
+    price: 20.00,
     description: "Rolls filled with hot chips perfect for a quick meal",
     image: Chiproll 
 	},
