@@ -75,20 +75,13 @@ export const products = [
   },
   {
     id: 10,
-    name: " Girl-Themed Raffle Bundle",
+    name: "12A Raffle Bundle",
     price: 10.00,
-    description: "Win amazing prizes specifically girl-themed R10 per ticket",
+    description: "Win a basket fully of tasty treats, R10 per ticket",
     image:  smashburgerImage
   },
-	  {
-    id: 11,
-    name: " Boy-Themed Raffle Bundle",
-    price: 10.00,
-    description: "Win exciting prizes specifically boy-themed R10 per ticket",
-    image: boyThemeImage
-  },
    {
-    id: 12,
+    id: 11,
     name: "Car Wash",
     price: 50.00,
     description: "Car wash for the hard working teachers that would like their car to shine!",
