@@ -1,14 +1,13 @@
 
 import ribbonRoseImage from "../assets/images/ribbon-rose.jpg";
-import boyThemeImage from "../assets/images/boy-theme.png";
 import girlThemeImage from "../assets/images/girl-theme.png";
 import milkshakeImage from "../assets/images/milkshake.png";
 import popCornImage from "../assets/images/popcorn.png";
-import smashburgerImage from "../assets/images/smash-burger.png";
 import oatcrunchieImage from "../assets/images/oat-crunchies.png";
 import Chiproll from "../assets/images/chiproll.jpg";
 import Vienna from "../assets/images/vienna.jpg";
 import IceCoffee from "../assets/images/af853bc1-d98d-4a79-ae53-b671afe5451f.png";
+import Raffel from "../assets/images/raffel.png";
 export const products = [
   {
     id: 1,
@@ -78,7 +77,7 @@ export const products = [
     name: "12A Raffle Bundle",
     price: 10.00,
     description: "Win a basket fully of tasty treats, R10 per ticket",
-    image:  smashburgerImage
+    image: Raffel
   },
    {
     id: 11,
