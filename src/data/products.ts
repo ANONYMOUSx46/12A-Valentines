@@ -26,7 +26,7 @@ export const products = [
   {
     id: 3,
     name: "Vienna Parcels",
-    price: 40.00,
+    price: 30.00,
     description: "Delicious Vienna parcels filled with exotic flavours",
     image: Vienna 
 	},
@@ -53,7 +53,7 @@ export const products = [
     },
   {	
     id: 7,
-    name: "Buscuits",
+    name: "Biscuits",
     price: 15.00,
     description: "A delicious butter buscuit to go with your iced coffee",
     image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/7860f881-7678-4ced-b617-5757e0972611/c4ecad6d-192c-4dfc-92d8-8dfe136ae2bb.png"
