@@ -80,14 +80,14 @@ export const products = [
     image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/1cac9899-fc9d-42fb-9067-8729aeddb53a/3c8346ac-f634-40b1-b41c-ea5f0b091fe9.png"
   },
   {
-    id: 10,
+    id: 11,
     name: "12A Raffle Bundle",
     price: 10.00,
     description: "Win a basket fully of tasty treats, R10 per ticket",
     image: Raffel
   },
    {
-    id: 11,
+    id: 12,
     name: "Car Wash",
     price: 50.00,
     description: "Car wash for the hard working teachers that would like their car to shine!",
