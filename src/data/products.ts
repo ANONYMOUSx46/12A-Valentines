@@ -40,7 +40,7 @@ export const products = [
   {
     id: 5,
     name: "Ribbon Rose Bouquet",
-    price: 20.00,
+    price: 25.00,
     description: "Beautiful handcrafted ribbon rose bouquet 8 flowers in a bouquet, R5 for a single flower",
     image: ribbonRoseImage
   },
@@ -54,7 +54,7 @@ export const products = [
   {	
     id: 7,
     name: "Biscuits",
-    price: 15.00,
+    price: 5.00,
     description: "A delicious butter buscuit to go with your iced coffee",
     image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/7860f881-7678-4ced-b617-5757e0972611/c4ecad6d-192c-4dfc-92d8-8dfe136ae2bb.png"
   },
@@ -82,7 +82,7 @@ export const products = [
   {
     id: 11,
     name: "12A Raffle Bundle",
-    price: 10.00,
+    price: 15.00,
     description: "Win a basket fully of tasty treats, R10 per ticket",
     image: Raffel
   },
