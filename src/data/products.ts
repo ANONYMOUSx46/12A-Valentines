@@ -76,7 +76,7 @@ export const products = [
     id: 10,
     name: "Photobooth",
     price: 20.00,
-    description: "Capture the fun mmemory of the day with your friends at the photobooth, pictures printed in colour and laminated",
+    description: "Capture the fun memory of the day with your friends at the photobooth, pictures printed in colour and laminated",
     image: "https://cdn.qwenlm.ai/output/e6c32d1f-21bc-4a2f-b447-09eb92b016c8/t2i/1cac9899-fc9d-42fb-9067-8729aeddb53a/3c8346ac-f634-40b1-b41c-ea5f0b091fe9.png"
   },
   {
